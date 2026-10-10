@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Barra de Navegação -->
+    <nav>
+      <div id="home">
+        <!-- Ícone Home que navega para o topo -->
+        <a href="#about-me">
+          <img src="https://icon-library.com/images/home-icon-sign/home-icon-sign-12.jpg" alt="Home" width="30px" />
+        </a>
+      </div>
+      <div class="profile_name">Seu Nome</div>
+      <div class="topdiv">
+        <a class="topmenu" href="#about-me">Sobre Mim</a>
+        <a class="topmenu" href="#skills">Habilidades</a>
+        <a class="topmenu" href="#projects">Detalhes do Projeto</a>
+        <a class="topmenu" href="#recommendations">Recomendações</a>
+      </div>
+    </nav>
+
+    <!-- Seção Sobre Mim -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://via.placeholder.com/180" class="profile_img" alt="Minha Foto" />
+      </div>
+      <div>
+        <h1>Olá, eu sou Seu Nome! 👋</h1>
+        <p>
+          Sou desenvolvedora Full-Stack em formação, apaixonada por criar soluções web modernas, funcionais e focadas na melhor experiência do usuário. Tenho experiência com JavaScript, HTML5, CSS3, React e Python.
+        </p>
+      </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <div style="clear:both;"></div>
+      <div class="all_skills">
+        <!-- Habilidades Padrão -->
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+          <h6>HTML5</h6>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+          <h6>CSS3</h6>
+        </div>
+        <!-- 3 Novas Habilidades Adicionadas -->
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          <h6>JavaScript</h6>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+          <h6>React</h6>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          <h6>Python</h6>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects">
+      <h2>Detalhes do Projeto</h2>
+      <div style="clear:both;"></div>
+      <div class="projects-container">
+        <!-- 3 Novos Projetos -->
+        <div class="project-card">
+          <h3>Sistema de Gestão Financeira</h3>
+          <ul>
+            <li>Aplicação web desenvolvida com React e Node.js para controle de despesas e relatórios gráficos interativos.</li>
+          </ul>
+        </div>
+        <hr>
+        <div class="project-card">
+          <h3>E-commerce de Moda Sustentável</h3>
+          <ul>
+            <li>Plataforma de comércio eletrônico integrada com API de pagamentos e catálogo dinâmico de produtos.</li>
+          </ul>
+        </div>
+        <hr>
+        <div class="project-card">
+          <h3>Plataforma de Daily Vlogging</h3>
+          <ul>
+            <li>Blog pessoal responsivo construído em HTML5, CSS3 e JavaScript focado em rotinas e compartilhamento de mídia.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Recomendações -->
+    <section id="recommendations">
+      <h2>Recomendações</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <!-- 3 Novas Recomendações -->
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Seu Nome é uma profissional dedicada, com excelente visão técnica para front-end e grande facilidade para aprender novas tecnologias.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Trabalhar em equipe com Seu Nome foi uma experiência incrível. Sua atenção aos detalhes em projetos de UX/UI faz toda a diferença.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Demonstrou grande domínio em JavaScript e entrega de prazos ágeis durante nossas sprints de desenvolvimento web.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form para Adicionar Recomendação -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Deixe uma Recomendação</legend>
+          <input type="text" placeholder="Seu Nome (opcional)" id="new_recommendation_name"><br/>
+          <textarea id="new_recommendation" cols="50" rows="5" placeholder="Escreva sua recomendação aqui..."></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Enviar</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Pop-up de Confirmação -->
+    <div class="icon_big" id="popup">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/White_check_in_green_circle.svg" width="50px"/>
+      <h3>Obrigado por enviar uma recomendação!</h3>
+      <button onclick="showPopup(false)">OK</button>
+    </div>
+
+  </body>
+</html>
